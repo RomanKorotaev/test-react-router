@@ -4,10 +4,33 @@ import styles from './Navigation.module.css';
 const Navigation = () => {
   return (
   <nav>
-     <NavLink to="/"
-      className={styles.link}> Главная</NavLink>
-     <NavLink to="/authors" className={styles.link}>Авторы</NavLink>
-     <NavLink to="/books" className={styles.link}>Книги</NavLink>
+     <NavLink 
+     exact
+     to="/"
+     className={styles.link}
+     activeClassName={styles.activeLink}
+     >
+        Главная
+    </NavLink>
+
+     <NavLink
+     exact
+      to="/authors"
+      className={styles.link}
+      activeClassName={styles.activeLink}
+      >
+        Авторы
+      </NavLink>
+
+     <NavLink 
+     exact
+      to="/books"
+      className={styles.link}
+      activeClassName={styles.activeLink}
+    >
+      Книги
+    </NavLink>
+
     </nav>
   )
 } 
